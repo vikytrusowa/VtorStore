@@ -2,55 +2,78 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <title>ВторStore</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
     <link href="style/css/reset.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
     <link href="style/css/style.css" rel="stylesheet">
 </head>
 <body>
 <header class="header">
-    <div class="header__heading  content-row">
-        <a href="#"><img src="" alt="Logo"></a>
-        <a href="#" class="header__phone"><img src="img/phone.svg" alt="Phone"> <span>8 (123) 456-78-90</span></a>
-        <a href="#" class="content-button header__call ">Обратный звонок</a>
+    <div class="content-container">
+        <div class="header__heading  content-row">
+            <a href="#" class="header__logo"><img src="img/logo.png" alt="Logo" class="content-image"></a>
+            <a href="tel:81234567890" class="header__phone content-row"><img src="img/phone.svg" alt="Phone"
+                                                                             class="header__icon">
+                <span>8 (123) 456-78-90</span></a>
+            <a href="#modal3" id="inline3" class="content-button header__call ">Обратный звонок</a>
+        </div>
+    </div>
+    <div class="invite__wrap">
+        <div class="header__modal" id="modal3">
+            <h3 class="invite__subtitle">Заказать обратный звонок</h3>
+            <form class="header__form">
+                <label class="invite__label">Укажите ваше имя</label>
+                <input class="invite__input" type="text">
+                <label class="invite__label">Ваш контактный телефон</label>
+                <input class="invite__input" type="tel">
+                <button class="content-button header__send">Отправить заявку</button>
+            </form>
+            <button class="invite__close"></button>
+        </div>
     </div>
     <div class="header__wrap">
         <ul class="header__nav content-row">
             <li class="header__item">
-                <a href="#" class="header__link">Вывоз вторсырья </a>
+                <a href="#accept" class="header__link">Вывоз вторсырья </a>
             </li>
             <li class="header__item">
-                <a href="#" class="header__link">Отзывы</a>
+                <a href="#reviews" class="header__link">Отзывы</a>
             </li>
             <li class="header__item">
-                <a href="#" class="header__link">Как мы работаем</a>
+                <a href="#work" class="header__link">Как мы работаем</a>
             </li>
         </ul>
 
     </div>
     <div class="header__wrapper">
         <div class="content-container">
-            <h2 class="content-subtitle header__subtitle">Отправляем вторсырье
+            <h2 class="content-subtitle header__subtitle">Отправляем вторсырье<br>
                 на переработку</h2>
-            <h1 class="header__title">Превращаем отходы <span class="header__title--color">в ДОХОДЫ!</span></h1>
+            <h1 class="header__title"><span class="header__title--inner">Превращаем отходы</span><span
+                    class="header__title--color">в ДОХОДЫ!</span></h1>
             <p class="header__paragraph">Даем мусору вторую жизнь, с заботой об ЭКОЛОГИИ</p>
             <button class="content-button">Сдать вторсырье</button>
         </div>
 
     </div>
 </header>
-<section class="accept">
+<section class="accept" id="accept">
     <div class="content-container">
         <h2 class="content-subtitle accept__title">Мы принимаем</h2>
         <ul class="content-row accept__list">
-            <li class="accept__item">
-                <div>
-                    <img src="">
+            <li class="accept__item  accept__inner">
+                <div class="content-row accept__icon">
+                    <img src="img/product_mark1.png" alt="PETE">
                 </div>
                 <p class="accept__info">Бутылки</p>
             </li>
-            <li class="accept__item">
-                <div>
-                    <img src="">
+            <li class="accept__item accept__inner">
+                <div class="content-row accept__icon">
+                    <img src="img/product_mark2.png" alt="HDPE">
                 </div>
                 <p class="accept__info">Трубы
                     Флаконы от
@@ -59,24 +82,24 @@
                     Пакеты
                     Ящики</p>
             </li>
-            <li class="accept__item">
-                <div>
-                    <img src="">
+            <li class="accept__item  accept__inner">
+                <div class="content-row accept__icon">
+                    <img src="img/product_mark3.png" alt="PVC">
                 </div>
                 <p class="accept__info">ПВХ
                     Оконный
                     профиль</p>
             </li>
             <li class="accept__item">
-                <div>
-                    <img src="">
+                <div class="content-row accept__icon">
+                    <img src="img/product_mark4.png" alt="LDPE">
                 </div>
                 <p class="accept__info">Пакеты
                     пленка</p>
             </li>
-            <li class="accept__item">
-                <div>
-                    <img src="">
+            <li class="accept__item accept__item--inner">
+                <div class="content-row accept__icon">
+                    <img src="img/product_mark5.png" alt="PP">
                 </div>
                 <p class="accept__info">Ведра пищевые
                     Бутылки от молока
@@ -85,11 +108,18 @@
                     Ящики
                     Пленки</p>
             </li>
-            <li class="accept__item">
-                <div>
-                    <img src="">
+            <li class="accept__item  accept__inner">
+                <div class="content-row accept__icon">
+                    <img src="img/product_mark6.png" alt="PS">
                 </div>
                 <p class="accept__info">Упаковка</p>
+            </li>
+            <li class="accept__item">
+                <div class="content-row accept__icon">
+                    <img src="img/product_mark7.png" alt="PAP">
+                </div>
+                <p class="accept__info">картон
+                    бумага</p>
             </li>
         </ul>
     </div>
@@ -97,17 +127,17 @@
 </section>
 <section class="invite">
     <div class="content-container">
-        <h2 class="content-subtitle">Мы приглашаем к сотрудничеству
+        <h2 class="content-subtitle invite__title">Мы приглашаем к сотрудничеству
             Юридических лиц и Владельцев Бизнеса</h2>
         <p class="invite__paragraph">Для Вас мы можем предложить особые условия:</p>
         <ul class="invite__list content-row">
             <li class="invite__item">
-                <div>
-                    <img>
+                <div class="content-row invite__icon">
+                    <img src="img/conditions1.png" alt="Вывоз вторсырья">
                 </div>
                 <span class="invite__name">Вывоз вторсырья
 от любого количества</span>
-                <p class="invite__name--info">(Мы можем забирать
+                <p class="invite__name invite__name--info">(Мы можем забирать
                     вторсырье ежедневно,
                     а Вы экономите
                     место в своем помещении
@@ -116,135 +146,278 @@
                     его объёмов)</p>
             </li>
             <li class="invite__item">
-                <div>
-                    <img>
+                <div class="content-row invite__icon">
+                    <img src="img/conditions2.png" alt="Предоставление
+договора">
                 </div>
                 <span class="invite__name">Предоставление
-договора
+договора<br>
 на вывоз отходов</span>
             </li>
             <li class="invite__item">
-                <div>
-                    <img>
+                <div class="content-row invite__icon">
+                    <img src="img/conditions3.png" alt="Взаимовыгодные
+цены">
                 </div>
                 <span class="invite__name">Взаимовыгодные
 цены на Вторсырье</span>
             </li>
             <li class="invite__item">
-                <div>
-                    <img>
+                <div class="content-row invite__icon">
+                    <img src="img/conditions4.png" alt="Любая форма оплаты">
                 </div>
-                <span class="invite__name">Любая
+                <span class="invite__name">Любая<br>
 форма оплаты</span>
             </li>
         </ul>
         <p class="invite__text">Вы решаете куда попадет Ваш мусор, но сдавать его нам на переработку,
             будет лучший вклад в окружающую среду, который Вы можете вносить каждый день</p>
-        <button class="content-button">Анкета для юридических лиц</button>
+        <a id="inline" href="#modal1" class="content-button invite__button">Анкета для юридических лиц</a>
+        <div class="invite__wrap">
+            <div class="invite__modal" id="modal1">
+                <h3 class="invite__subtitle">Анкета<br>
+                    для юридических лиц</h3>
+                <form class="invite__form">
+                    <ul class="invite__roster">
+                        <li>
+                            <label class="invite__label">Укажите ваш город</label>
+                            <input class="invite__input" type="text">
+                        </li>
+                        <li>
+                            <label class="invite__label"> Название вашей организации</label>
+                            <input class="invite__input" type="text">
+                        </li>
+                        <li>
+                            <label class="invite__label">Укажите ваш точный адрес</label>
+                            <input class="invite__input" type="text">
+                        </li>
+                        <li>
+                            <label class="invite__label">Укажите ваш email</label>
+                            <input class="invite__input" type="email">
+                        </li>
+                        <li>
+                            <label class="invite__label">Ваш контактный телефон</label>
+                            <input class="invite__input" type="tel">
+                        </li>
+                        <li>
+                            <label class="invite__label">Работая с ВторStore, вам необходимо накапливать
+                                вторсырье. Нам экономически невыгодно ехать за двумя
+                                ПЭТ - бутылками. Мы забираем вторсырье (кроме картона)
+                                в сверхпрочных мешках (120-300 кг). Сколько мешков
+                                по 30-40 кг вы можете накапливать за неделю?</label>
+                            <input class="invite__input" type="text">
+                        </li>
+                        <li>
+                            <label class="invite__label">Выбирая между высокой ценой за вторсырье
+                                и частым вывозом, что для вас важнее?</label>
+                            <input class="invite__input" type="text">
+                        </li>
+                    </ul>
+                    <a id="inline2" href="#modal2" class="content-button invite__send">Отправить заявку</a>
+                </form>
+                <button class="invite__close"></button>
+            </div>
+        </div>
+        <div class="invite__wrap">
+            <div class="invite__thank" id="modal2">
+                <h3 class="invite__subtitle">Спасибо за обращение,
+                    вместе мы сделаем<br>
+                    наш город чище!</h3>
+                <p class="invite__info">Мы рассмотрим вашу анкету<br>
+                    и обязательно свяжимся с вами
+                    в ближайшее время.</p>
+                <button class="invite__close"></button>
+            </div>
+
+        </div>
 
     </div>
 </section>
 <section class="wherefore">
     <div class="content-container">
-        <h2 class="content-subtitle">Для чего это нужно:</h2>
+        <h2 class="content-subtitle wherefore__title">Для чего это нужно:</h2>
         <p class="wherefore__paragraph">Вместе мы можем увеличить объёмы переработки и снизить количество отходов.
-            Всё, что произведено, должно быть переработано.
+            <span class="wherefore__paragraph--inner"> Всё, что произведено, должно быть переработано.</span>
             Мусор становиться ценным вторсырьём, от этого выигрывают все!</p>
         <ul class="content-row wherefore__list">
             <li class="content-row wherefore__item">
-                <img>
-                <p class="wherefore__info">100 килограмм макулатуры
+                <img src="img/advantages1.png" alt="дерево" class="wherefore__icon">
+                <p class="wherefore__info">100 килограмм макулатуры<br>
                     – это одно спасенное дерево</p>
             </li>
             <li class="content-row wherefore__item">
-                <img>
+                <img src="img/advantages2.png" alt="пластик" class="wherefore__icon">
                 <p class="wherefore__info">Из переработанного пластика
                     Будут изготовлены новые изделия</p>
             </li>
             <li class="content-row wherefore__item">
-                <img>
-                <p class="wherefore__info">Около четверти всего мусора
+                <img src="img/advantages3.png" alt="бумага" class="wherefore__icon">
+                <p class="wherefore__info">Около четверти всего мусора<br>
                     на планете является бумажными
                     отходами и бумажной продукцией</p>
             </li>
             <li class="content-row wherefore__item">
-                <img>
-                <p class="wherefore__info">Микрочастицы пластика
+                <img src="img/advantages4.png" alt="средa" class="wherefore__icon">
+                <p class="wherefore__info">Микрочастицы пластика<br>
                     Не попадут в окружающую среду</p>
             </li>
         </ul>
     </div>
 </section>
-<section>
+<section class="reviews" id="reviews">
     <div class="content-container">
-        <h2 class="content-subtitle">О нас говорят:</h2>
+        <h2 class="content-subtitle reviews__title">О нас говорят:</h2>
+        <div class="">
+            <div class="reviews__slider swiper-container">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <div class="reviews__element">
+                            <img src="img/avatar.png" alt="Avatar" class="reviews__icon">
+                            <span class="reviews__name">Александр Иванов</span>
+                            <span class="reviews__city">Саратов</span>
+                            <p class="reviews__info">Спасибо большое за Вашу работу и помощь. Проблема, казавшаяся
+                                неразрешимой, исчезла за часа полтора вместе с кучей строительного мусора. Сервис на
+                                высоте, операторы и грузчики вежливые и ответственные.<br> Дешево. ...</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="reviews__element">
+                            <img src="img/avatar.png" alt="Avatar" class="reviews__icon">
+                            <span class="reviews__name">Александр Иванов</span>
+                            <span class="reviews__city">Саратов</span>
+                            <p class="reviews__info">Спасибо большое за Вашу работу и помощь. Проблема, казавшаяся
+                                неразрешимой, исчезла за часа полтора вместе с кучей строительного мусора. Сервис на
+                                высоте, операторы и грузчики вежливые и ответственные.<br> Дешево. ...</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="reviews__element">
+                            <img src="img/avatar.png" alt="Avatar" class="reviews__icon">
+                            <span class="reviews__name">Александр Иванов</span>
+                            <span class="reviews__city">Саратов</span>
+                            <p class="reviews__info">Спасибо большое за Вашу работу и помощь. Проблема, казавшаяся
+                                неразрешимой, исчезла за часа полтора вместе с кучей строительного мусора. Сервис на
+                                высоте, операторы и грузчики вежливые и ответственные.<br> Дешево. ...</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="reviews__element">
+                            <img src="img/avatar.png" alt="Avatar" class="reviews__icon">
+                            <span class="reviews__name">Александр Иванов</span>
+                            <span class="reviews__city">Саратов</span>
+                            <p class="reviews__info">Спасибо большое за Вашу работу и помощь. Проблема, казавшаяся
+                                неразрешимой, исчезла за часа полтора вместе с кучей строительного мусора. Сервис на
+                                высоте, операторы и грузчики вежливые и ответственные.<br> Дешево. ...</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="reviews__element">
+                            <img src="img/avatar.png" alt="Avatar" class="reviews__icon">
+                            <span class="reviews__name">Александр Иванов</span>
+                            <span class="reviews__city">Саратов</span>
+                            <p class="reviews__info">Спасибо большое за Вашу работу и помощь. Проблема, казавшаяся
+                                неразрешимой, исчезла за часа полтора вместе с кучей строительного мусора. Сервис на
+                                высоте, операторы и грузчики вежливые и ответственные.<br> Дешево. ...</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="reviews__element">
+                            <img src="img/avatar.png" alt="Avatar" class="reviews__icon">
+                            <span class="reviews__name">Александр Иванов</span>
+                            <span class="reviews__city">Саратов</span>
+                            <p class="reviews__info">Спасибо большое за Вашу работу и помощь. Проблема, казавшаяся
+                                неразрешимой, исчезла за часа полтора вместе с кучей строительного мусора. Сервис на
+                                высоте, операторы и грузчики вежливые и ответственные.<br> Дешево. ...</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
     </div>
 </section>
-<section class="work">
+<section class="work" id="work">
     <div class="content-container">
-        <h2 class="content-subtitle">Как мы работаем</h2>
-        <ul class="content-row">
-            <li>
-                <span class="work__name">Звоните нам</span>
-                <div>
-                    <img>
+        <h2 class="content-subtitle work__title">Как мы работаем</h2>
+        <ul class="content-row work__list">
+            <li class="work__item work__item--bottom">
+                <span class="work__name">Звоните<br> нам</span>
+                <div class="content-row work__icon">
+                    <img src="img/work1.png" alt="заявкa">
+                    <span class="work__number">1</span>
                 </div>
                 <p class="work__info">диспетчер
-                    принимает
+                    принимает<br>
                     заявку</p>
             </li>
-            <li>
-                <span class="work__name">Оформляем
+            <li class="work__item  work__item--top">
+                <span class="work__name">Оформляем<br>
 заявку</span>
-                <div>
-                    <img>
+                <div class="content-row work__icon">
+                    <img src="img/work2.png" alt="Оформления">
+                    <span class="work__number">2</span>
                 </div>
                 <p class="work__info">оговаривается
                     удобное время
                     вывоза и адрес</p>
             </li>
-            <li>
-                <span class="work__name">Курьер проверит
+            <li class="work__item  work__item--bottom">
+                <span class="work__name">Курьер проверит<br>
 вторсырье</span>
-                <div>
-                    <img>
+                <div class="content-row work__icon">
+                    <img src="img/work3.png" alt="Проверка">
+                    <span class="work__number">3</span>
                 </div>
                 <p class="work__info">бесплатно погрузит
-                    и вывезет
+                    и вывезет<br>
                     на переработку</p>
             </li>
-            <li>
+            <li class="work__item">
                 <span class="work__name">Расчёт</span>
-                <div>
-                    <img>
+                <div class="content-row work__icon">
+                    <img src="img/work4.png" alt="Оплата">
+                    <span class="work__number">4</span>
                 </div>
                 <p class="work__info">оплата на месте,
                     сразу после
                     взвешивания</p>
             </li>
         </ul>
-        <button class="content-button">Сдать вторсырье</button>
+        <button class="content-button work__button">Сдать вторсырье</button>
     </div>
 </section>
-<footer>
-    <div class="header__heading  content-row">
-        <a href="#"><img src="" alt="Logo"></a>
-        <a href="#" class="header__phone"><img src="img/phone.svg" alt="Phone"> <span>8 (123) 456-78-90</span></a>
-        <a href="#" class="content-button header__call ">Обратный звонок</a>
+<footer class="footer">
+    <div class="content-container">
+        <div class="header__heading  content-row">
+            <a href="#" class="header__logo"><img src="img/logo.png" alt="Logo" class="content-image"></a>
+            <a href="tel:81234567890" class="header__phone content-row"><img src="img/phone.svg" alt="Phone"
+                                                                             class="header__icon">
+                <span>8 (123) 456-78-90</span></a>
+            <a href="#modal3" id="inline5" class="content-button header__call ">Обратный звонок</a>
+        </div>
     </div>
     <div class="header__wrap">
         <ul class="header__nav content-row">
             <li class="header__item">
-                <a href="#" class="header__link">Вывоз вторсырья </a>
+                <a href="#accept" class="header__link">Вывоз вторсырья </a>
             </li>
             <li class="header__item">
-                <a href="#" class="header__link">Отзывы</a>
+                <a href="#reviews" class="header__link">Отзывы</a>
             </li>
             <li class="header__item">
-                <a href="#" class="header__link">Как мы работаем</a>
+                <a href="#work" class="header__link">Как мы работаем</a>
             </li>
         </ul>
+
     </div>
 </footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+<script src="https://unpkg.com/swiper/js/swiper.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+<script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
