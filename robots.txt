@@ -1,0 +1,8 @@
+User-agent: Yandex
+Disallow: /VtorStore/
+
+User-agent: GoogleBot
+Disallow: /VtorStore/
+
+User-agent: *
+Disallow: /VtorStore/
